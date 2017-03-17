@@ -1,0 +1,38 @@
+
+package gmailpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Gmail 
+{
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+        //OpenFirefoxBrowser
+        WebDriver d;
+System.setProperty("webdriver.gecko.driver", "C:/QA Murali/selenium-java-3.0.1");
+ d=new FirefoxDriver();
+//Open URL
+Thread.sleep(5000);
+d.get("https://www.google.com");
+//Click on sign in
+Thread.sleep(5000);
+d.findElement(By.id("gb_70")).click();
+//enter Email Id
+Thread.sleep(5000);
+d.findElement(By.id("Email")).sendKey("gmkkumar426@gmail.com");
+//Click on next in button
+d.findElement(By.id("next" )).click();
+//Enter Password
+Thread.sleep(7000);
+d.findElement(By.id("Passwd")).sendKeys("09G51A0426");
+//Click on sign in button
+d.findElement(By.id("signIn")).click();
+					
+d.findElemen(By.xpath(".//[@id='gbw']/div/div/ div[1]/div[2]/a")).click();
+			}
+
+	}
+
